@@ -1,36 +1,24 @@
-// Variables
-let score = 0;
-const maxAttempts = 3;
-const minNumber = 1;
-const maxNumber = 10;
+document.addEventListener('DOMContentLoaded', function () {
+  // Elementos del DOM
+  const inputData = document.getElementById('inputData');
+  const submitButton = document.getElementById('submitButton');
+  const outputResult = document.getElementById('outputResult');
 
-// Función - número aleatorio
-function generateRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+  // Evento al hacer clic en el botón
+  submitButton.addEventListener('click', function () {
+      const userInput = inputData.value;
 
-// Función del juego
-function playGame() {
-  for (let attempts = 0; attempts < maxAttempts; attempts++) {
-    const randomNumber = generateRandomNumber(minNumber, maxNumber);
-    const userGuess = parseInt(prompt(`Intento ${attempts + 1} - Adivina el número entre ${minNumber} y ${maxNumber}:`));
+      // Lógica de la aplicación
+      const processedData = processData(userInput);
 
-    if (userGuess === randomNumber) {
-      alert('¡Adivinaste! Has ganado un punto.');
-      score++;
-      break;
-    } else if (userGuess < randomNumber) {
-      alert('El número es mayor. Inténtalo de nuevo.');
-    } else {
-      alert('El número es menor. Inténtalo de nuevo.');
-    }
+      // Mostrar resultado en el DOM
+      outputResult.innerHTML = `<p>Resultado: ${processedData}</p>`;
+  });
+
+  // Función de procesamiento de datos
+  function processData(data) {
+      // Aquí implementa la lógica de procesamiento de datos
+      // Puedes modificar esta función según las necesidades de tu aplicación
+      return `Datos ingresados: ${data}`;
   }
-
-  if (score > 0) {
-    console.log(`Has ganado ${score} punto(s).`);
-  } else {
-    console.log('No has ganado puntos en este juego.');
-  }
-}
-
-confirm('Bienvenido al juego de adivinanza. ¿Deseas comenzar?') ? playGame() : alert('Hasta luego.');
+});

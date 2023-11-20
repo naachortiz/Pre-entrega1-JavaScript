@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Adivinanza</title>
+    <title>Mi Aplicación Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
-    <h1>Juego de Adivinanza</h1>
-    <p>Este simulador es un juego de adivinanza en el que tienes tres intentos para adivinar un número aleatorio dentro de un rango de 1 a 10. Tu objetivo es adivinar el número correcto y ganar puntos.</p>
+<body>
+    <h1>Mi Aplicación Web</h1>
+
+    <div id="app-container">
+        <label for="inputData">Ingresar Datos:</label>
+        <input type="text" id="inputData">
+        <button id="submitButton">Enviar</button>
+
+        <div id="outputResult">
+            <!-- resultados -->
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
