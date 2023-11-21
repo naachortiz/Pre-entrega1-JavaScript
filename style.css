@@ -1,37 +1,115 @@
-/* Estilos para la aplicación web */
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./assets/images/Curve\ Line.svg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px rgba(255, 254, 254, 0.3); 
 }
 
+
 #app-container {
-    max-width: 400px;
-    margin: 0 auto;
+    background-image: url('ruta/de/tu/imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    color: white;
 }
+
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 input {
     width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
-    background-color: #4caf50;
+    background-image: url(./assets/images/Shiny\ Overlay.svg);
     color: white;
-    padding: 8px 16px;
+    padding: 12px 24px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-colos;
 }
+
+#submitButton {
+    color: white; 
+    border: 2px solid #0b7dda; /* Borde del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: border-color 0.3s; 
+    box-shadow: 0 0 20px 0 rgba(11, 125, 218, 0.5); 
+}
+
+#submitButton:hover {
+    border-color: aqua; 
+}
+
 
 #outputResult {
     margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+h1 {
+    color: #0174BE;
+}
+
+.alert {
+    padding: 20px;
+    background-image: url(./assets/images/Simple\ Shiny.svg) ;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#restartButton {
+    background-color: #2196f3;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px 0 rgba(33, 150, 243, 0.5); 
+}
+
+#restartButton:hover {
+    background-color: #0b7dda;
 }

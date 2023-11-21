@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Aplicación Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Juego de Adivinanza Mejorado</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Mi Aplicación Web</h1>
-
     <div id="app-container">
-        <label for="inputData">Ingresar Datos:</label>
-        <input type="text" id="inputData">
-        <button id="submitButton">Enviar</button>
+        <h1>Juego de Adivinanza</h1>
+
+        <p>Bienvenido al Juego de Adivinanza. Adivina el número correcto dentro del rango establecido. Selecciona un nivel de dificultad y comienza a jugar.</p>
+
+        <label for="difficulty">Selecciona un Nivel de Dificultad:</label>
+        <select id="difficulty">
+            <option value="1">Fácil</option>
+            <option value="2">Intermedio</option>
+            <option value="3">Difícil</option>
+        </select>
+
+        <label for="inputData">Ingresar Suposición:</label>
+        <input type="number" id="inputData" min="1" max="100">
+
+        <button id="submitButton">Adivinar</button>
 
         <div id="outputResult">
-            <!-- resultados -->
+            <h2>Historial de Intentos</h2>
+            <!--  resultados o contenido generado dinámicamente -->
         </div>
+
+        <div id="score">Puntuación: 0</div>
+
+        <div class="alert" id="alertMessage"></div>
+
+        <button id="restartButton">Reiniciar Juego</button>
     </div>
 
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
