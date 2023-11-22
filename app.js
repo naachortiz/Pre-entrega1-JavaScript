@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Pregunta el nombre del usuario
     const userName = prompt('¡Hola! Ingresa tu nombre:');
   
-    // Muestra el mensaje de bienvenida en la alerta y el cuadro de texto
+    // Muestra el mensaje de bienvenida en la alerta 
     if (userName) {
       const welcomeMessage = `Bienvenido, ${userName}!`;
       displayAlert(welcomeMessage);
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alertMessage.textContent = message;
         setTimeout(() => {
             alertMessage.textContent = '';
-        }, 4000); // Ocultar el mensaje después de 4 segundos
+        }, 5000); // Ocultar el mensaje después de 5 segundos
     }
   
     startGame();
